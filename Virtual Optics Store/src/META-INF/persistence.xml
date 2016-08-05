@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.0" xmlns="http://java.sun.com/xml/ns/persistence" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://java.sun.com/xml/ns/persistence 
+http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd">
+<persistence-unit name="X" transaction-type="RESOURCE_LOCAL">
+    <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+    <class>Model/User</class>
+    <class>Model/Customer</class>
+    <class>Model/Admin</class>
+    <class>Model/Admin_Quantity</class>
+    <class>Model/Attempts</class>
+    <class>Model/News</class>
+    <class>Model/Glasses_Store</class>
+    <class>Model/Store</class>
+    <class>Model/Sale</class>
+    <class>Model/Glasses</class>
+    <class>Model/Transaction</class>
+    <class>Model/Brand</class>
+    <exclude-unlisted-classes>false</exclude-unlisted-classes>
+	<properties> 
+	    <property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver"/> 
+	    <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/VirtualOpticsStore"/> 
+	    <property name="javax.persistence.jdbc.user" value="TestUser"/> 
+	    <property name="javax.persistence.jdbc.password" value="123456789"/> 
+	    <property name="eclipselink.logging.level" value="FINE"/>
+	    <property name="eclipselink.ddl-generation" value="create-tables"/>
+	</properties>
+</persistence-unit>
+</persistence>
